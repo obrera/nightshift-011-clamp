@@ -1,7 +1,16 @@
+:root {
+  background: #020617;
+  color: #e2e8f0;
+}
+
+body {
+  background: radial-gradient(circle at top, #1e293b 0%, #020617 58%);
+}
+
 #root {
-  max-width: 920px;
   margin: 0 auto;
-  padding: 2rem 1rem 3rem;
+  max-width: 980px;
+  padding: 1.5rem;
 }
 
 .app {
@@ -10,82 +19,97 @@
 }
 
 header h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
   margin: 0;
-  font-size: 2rem;
 }
 
 header p {
+  color: #94a3b8;
   margin-top: 0.5rem;
-  color: #475569;
 }
 
 .panel {
-  border: 1px solid #cbd5e1;
-  border-radius: 12px;
+  background: rgb(15 23 42 / 78%);
+  border: 1px solid rgb(148 163 184 / 24%);
+  border-radius: 14px;
   padding: 1rem;
-  background: #fff;
 }
 
 h2 {
+  font-size: 1.05rem;
   margin: 0 0 0.75rem;
-  font-size: 1.1rem;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
 label {
+  color: #cbd5e1;
   display: grid;
-  gap: 0.35rem;
   font-size: 0.9rem;
-  color: #334155;
+  gap: 0.35rem;
+}
+
+input[type='number'],
+input[type='range'] {
+  width: 100%;
 }
 
 input[type='number'] {
-  width: 100%;
-  box-sizing: border-box;
-  border: 1px solid #94a3b8;
+  background: #0b1220;
+  border: 1px solid #334155;
   border-radius: 8px;
-  padding: 0.45rem 0.6rem;
+  color: #f8fafc;
+  padding: 0.5rem 0.6rem;
 }
 
 .presets {
-  margin-top: 0.8rem;
   display: flex;
-  gap: 0.5rem;
   flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
 }
 
 button {
-  border: 1px solid #94a3b8;
+  background: #0b1220;
+  border: 1px solid #334155;
   border-radius: 8px;
-  background: #f8fafc;
-  color: #0f172a;
-  padding: 0.45rem 0.75rem;
+  color: #e2e8f0;
   cursor: pointer;
+  padding: 0.45rem 0.75rem;
+}
+
+button:hover {
+  border-color: #38bdf8;
 }
 
 .output code {
+  background: #0b1220;
+  border: 1px solid #334155;
+  border-radius: 10px;
   display: block;
   margin-bottom: 0.75rem;
-  padding: 0.75rem;
-  border-radius: 8px;
-  background: #0f172a;
-  color: #e2e8f0;
   overflow-x: auto;
+  padding: 0.75rem;
 }
 
 .copy {
-  background: #0f172a;
-  color: #fff;
+  background: #38bdf8;
+  border-color: transparent;
+  color: #082f49;
+  font-weight: 700;
+}
+
+.copy:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
 }
 
 .preview p {
+  border-top: 1px dashed #334155;
   margin-top: 0.75rem;
-  border-top: 1px dashed #cbd5e1;
   padding-top: 0.75rem;
-  line-height: 1.4;
 }
